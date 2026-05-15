@@ -6,6 +6,9 @@ import "./index.css";
 import LandingPage from "./pages/LandingPage";
 import Login from "./pages/Login";
 import Signup from "./pages/Signup";
+import Header from "./components/Header";
+import Footer from "./components/Footer";
+
 
 const router = createBrowserRouter([
   {
@@ -20,10 +23,13 @@ const router = createBrowserRouter([
     path: "/signup",
     element: <Signup />,
   },
+
 ]);
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
+    <Header />
     <RouterProvider router={router} />
+    <Footer />
   </React.StrictMode>
 );
